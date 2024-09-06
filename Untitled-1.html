@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal Stripe Border with Gaps</title>
+    <style>
+        .diagonal-stripes {
+            height: 14px;
+            width: 100%;
+            background: repeating-linear-gradient(
+                135deg,
+                transparent 0px,
+                transparent 14px,
+                #2D88FF 14px,
+                #2D88FF 28px,
+                transparent 28px,
+                transparent 42px,
+                #7E2BCD 42px,
+                #7E2BCD 56px,
+                transparent 56px,
+                transparent 70px,
+                #F86B97 70px,
+                #F86B97 84px
+            );
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #0352DC;
+            color: white;
+            font-family: PingFang SC;
+            font-size: 12px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagonal-stripes"></div>
+    <div class="footer" style="margin-top: 20px;">
+        <div class="logo"></div>
+        <div class="tip">
+            <p style="text-align: right;">系统自动邮件，请勿回复</p>
+            <p>This is an automated reply from a system mailbox. Please do not reply to this email.</p>
+        </div>
+    </div>
+</body>
+</html>

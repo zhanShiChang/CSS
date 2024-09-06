@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Border</title>
+    <style>
+        body {
+            background: url('http://csssecrets.io/images/stone-art.jpg');
+        }
+
+        .transparent-border {
+            border: 10px solid hsla(0, 0%, 100%, .5);
+            background: white;
+            /* 背景色会填充到边框区域，导致边框的半透明效果失效 */
+            /* padding-box || content-box || text */
+            /* background-clip: padding-box; */
+            max-width: 20em;
+            padding: 2em;
+            margin: 2em auto 0;
+            font: 100%/1.5 sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transparent-border">
+        Can I haz semi-transparent borders?
+        Pretty please?
+    </div>
+</body>
+
+</html>

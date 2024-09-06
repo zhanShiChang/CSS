@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Version Modal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    font-family: "PingFang SC";
+}
+
+.modal {
+    position: relative;
+    width: 585px;
+    /* min-height: 318px; */
+    padding: 59px 21px 68px 44px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #F5F8FF;
+    background-image: url('./opacity-logo.png');
+    background-position: calc(100% - 10px) calc(100% - 10px);
+    /* background-position: bottom 10px right 10px;  */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.modal:before,
+.modal:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.modal:before {
+    width: 30px;
+    height: 30px;
+    top: -20px;
+    left: 45px;
+}
+
+.modal:after {
+    width: 10px;
+    height: 10px;
+    top: -17px;
+    left: 90px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    background: #8c8c8c;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge {
+    background: linear-gradient(90deg, #EA886B 0%, #F9699E 100%);
+    color: white;
+    font-size: 12px;
+    padding: 0 6px;
+    border-radius: 2px;
+    margin-left: 5px;
+    text-align: center;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+.triangle {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #EA886B;
+}
+
+.button {
+    margin-top: 62px;
+    background: linear-gradient(90deg, #2A83FF 0%, #5B6DD1 100%);
+    color: white;
+    border: none;
+    border-radius: 41px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #5B6DD1 0%, #2A83FF 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: linear-gradient(to right, #417af8, #830cc8); */
+    z-index: -1;
+    border-radius: 20px;
+    transform: rotate(3deg);
+}
+
+.opacityLogo {
+    /* position: absolute; */
+    /* bottom: 10px; */
+    /* right: 10px; */
+    width: 250px;
+    height: 250px;
+    background: url('./opacity-logo.png');
+    background-position: bottom 10px right 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(0); }
+}
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="modal">
+            <div class="closeBtn">
+                <span style="margin-top: -2px;">&times;</span>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <span style="color: #333774; font-size: 20px; font-weight: 400;">
+                    GMS-海外版
+                </span>
+                <div class="badge">
+                    <div class="triangle"></div>
+                    全新上线
+                </div>
+            </div>
+            <p style="color: #333774; font-size: 36px; margin-top: 10px; font-weight: 700; font-family: 'TencentFont';">
+                全新版交互及部分功能升级
+            </p>
+            <div class="button">
+                立即体验
+            </div>
+            <div class="bg"></div>
+            <!-- <div class="opacityLogo"></div> -->
+        </div>
+    </div>
+</body>
+
+</html>
